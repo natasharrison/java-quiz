@@ -9,3 +9,29 @@
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and score
+
+
+// TIMER
+var timerEl = document.getElementById('countdown');
+var mainEl = document.getElementById('main');
+var startBtn = document.getElementById('start');
+
+
+// TIMER
+function countdown() {
+    var timeLeft = 60;
+
+    var timeInterval = setInterval(function () {
+      if (timeLeft > 0){
+          timerEl.textContent = timeLeft
+          timeLeft--
+      } else {
+        timerEl.textContent = ""
+        clearInterval(timeInterval);
+      }
+    },
+    1000);
+};
+
+// TIMER
+startBtn.onclick = countdown;
