@@ -68,7 +68,7 @@ function countdown() {
 // QUESTION FUNCTION 
 function populateQuestion(){
   var currentQuestion = quizQuestions[questionIndex];
-  var questionEl = document.getElementById("question-title");
+  var questionEl = document.getElementById("question");
 
   questionEl.textContent = currentQuestion.question;
   var currentOptions = currentQuestion.option;
@@ -82,4 +82,9 @@ function populateQuestion(){
 };
 
 // TIMER
-startBtn.onclick = countdown, populateQuestion;
+// startBtn.onclick = countdown;
+
+startBtn.onclick= function(){
+  populateQuestion();
+  countdown();
+};
