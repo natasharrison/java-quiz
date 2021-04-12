@@ -16,6 +16,37 @@ var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 
+// QUESTION CONTENT 
+var quizQuestions = [
+  {
+    question: "What is the proper way to write 'Hello!' in an alert box?",
+    option: ["prompt('Hello!');", "msg('Hello!');", "alert('Hello!');", "box('Hello!');"],
+    answer: "alert('Hello'!);"
+  },
+  {
+    question: "Control flow statements like for and while loops can be used to direct the order of operations and beahvior of your application. True or False?",
+    option: ["true", "false"],
+    answer: "true"
+  },
+  {
+    question: "Which operator is used to assign a value to a variable?",
+    option: [".", "=", ":", "&"],
+    answer: "="
+  },
+  {
+    question: "Inside which HTML element do we put or link to JavaScript?",
+    option: ["<script>", "<js>", "<java>", "<javaScript>"],
+    answer: "<script>"
+  },
+  {
+    question: "What is the correct way to write a script array?",
+    option: ["var animals = 'jaguar', 'otter', 'octopus'", "var animals =['jaguar', 'otter', 'octopus']", "var animals =(1)jaguar, (2)otter, (3)octopus", "var animals = jaguar/otter/octopus"],
+    answer: "alert('Hello'!);"
+  }
+];
+
+// ARRAY TO HOLD ANSWERS FOR SAVING 
+var answers = [];
 
 // TIMER
 function countdown() {
@@ -32,6 +63,9 @@ function countdown() {
     },
     1000);
 };
+
+
+
 
 // TIMER
 startBtn.onclick = countdown;
