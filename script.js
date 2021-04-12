@@ -1,4 +1,3 @@
-// GIVEN I am taking a code quiz
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
 // WHEN I answer a question
@@ -46,6 +45,8 @@ var quizQuestions = [
   }
 ];
 
+var questionIndex = 0;
+
 // ARRAY TO HOLD ANSWERS FOR SAVING 
 var answers = [];
 
@@ -72,7 +73,7 @@ function populateQuestion(){
 
   questionEl.textContent = currentQuestion.question;
   var currentOptions = currentQuestion.option;
-  var buttonEl = document.getElementById ("option-button");
+  var buttonEl = document.getElementById ("option");
 
   for (var i=0; i < currentOptions.length; i++) {
     var createButtonEl = document.createElement("button");
@@ -80,9 +81,6 @@ function populateQuestion(){
     buttonEl.appendChild(createButtonEl);
   }
 };
-
-// TIMER
-// startBtn.onclick = countdown;
 
 startBtn.onclick= function(){
   populateQuestion();
