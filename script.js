@@ -13,10 +13,11 @@
 
 // TIMER
 var timerEl = document.getElementById('countdown');
-var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 
 // QUESTION CONTENT 
+var questionEl = document.getElementById('question');
+
 var quizQuestions = [
   {
     question: "What is the proper way to write 'Hello!' in an alert box?",
@@ -64,8 +65,21 @@ function countdown() {
     1000);
 };
 
+// QUESTION FUNCTION 
+function populateQuestion(){
+  var currentQuestion = quizQuestions[questionIndex];
+  var questionEl = document.getElementById("question-title");
 
+  questionEl.textContent = currentQuestion.question;
+  var currentOptions = currentQuestion.option;
+  var buttonEl = document.getElementById ("option-button");
 
+  for (var i=0; i < currentOptions.length; i++) {
+    var createButtonEl = document.createElement("button");
+    createButtonEl.textContent = currentOptions[i];
+    buttonEl.appendChild(createButtonEl);
+  }
+};
 
 // TIMER
-startBtn.onclick = countdown;
+startBtn.onclick = countdown, populateQuestion;
