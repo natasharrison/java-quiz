@@ -14,7 +14,7 @@ An application that allows the user to take a timed quiz on JavaScript Fundament
 
 [GitHub] https://natasharrison.github.io/java-quiz/ 
 [Repository] https://github.com/natasharrison/java-quiz.git
-![screenshot] C:\Users\natas\Desktop\repo\Challenges\week-4\java-quiz
+[screenshot] https://github.com/natasharrison/java-quiz/blob/84fb97c2a5634c5d2e0ea0b69e5f6b54c706d39b/screenshot.JPG
 
 ## Contribution
 
