@@ -1,0 +1,22 @@
+body {
+  color: #fff;
+  background-color: forestgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 20px 35px;
+}
+
+.page-title {
+  text-shadow: 30px black;
+}
+
+p {
+  padding: 40px;
+}
+
+button {
+  border-radius: 15px;
+  background-color: chartreuse;
+  color: black;
+  padding: 15px 30px;
+}
